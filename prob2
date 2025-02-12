@@ -1,0 +1,47 @@
+
+Write a program to check whether a triangle can be formed with the given values for the angles.
+If sum of angles is equal to 180, then triangle can be formed, else it can't be formed.
+Input: 45 45 45
+Expected Output: 
+Triangle cannot be formed
+Explanation -> We are getting 3 inputs, that is three angles of triangle, but here the sum of three angles that is 45+45+45 is not equal to 180 so Triangle cannot be formed is the output.
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+        // to see how IntelliJ IDEA suggests fixing it.
+        System.out.printf("Hello and welcome!");
+        System.out.println("Learning DSA");
+        prob2();
+
+    }
+
+    public static  void prob2() {
+        System.out.println("Enter 3 values to form triangle ");
+        Scanner sc = new Scanner(System.in);
+        int[] numbers = new int[3];
+        int sum = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Enter number " + (i + 1));
+            numbers[i] = sc.nextInt();
+        }
+
+        for (int j = 0; j< numbers.length; j++) {
+            sum = sum + numbers[j];
+
+        }
+        if (sum == 180){
+            System.out.println("The triangle is solved ");
+        }else{
+            System.out.println("The triangle is unsolved ");
+        }
+
+
+
+    }
+}
