@@ -31,11 +31,11 @@ public class Main {
         // to see how IntelliJ IDEA suggests fixing it.
         System.out.printf("Hello and welcome!");
         System.out.println("Learning DSA");
-        prob3();
+        prob4();
 
     }
 
-    public static void prob3() {
+    public static void prob4() {
         System.out.println("Enter the size ");
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
