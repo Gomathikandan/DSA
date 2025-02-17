@@ -1,15 +1,21 @@
 /*
-Given mark of student, Print the Grade
+Write a program which takes two values x and y. Prints x for y number of times.
 
-Grade A if mark is greater than or equal to 90
+Input:
 
-Grade B if mark is greater than or equal to 80
+2
 
-Grade C if mark if greater than or equal to 60
+3
 
-Grade D if mark if greaer than or equal to 35
+Expected Output
 
-Fail if mark is lesser than 35
+2
+
+2
+
+2
+
+Explanation - 2 is x and 3 is y in the input. So 2 is printed 3 times on the output.
 */
 
 import java.util.Arrays;
@@ -29,20 +35,31 @@ public class Main {
 
     public static void prob6() {
 
-        System.out.println("Enter the mark of the student to check grade ");
+        System.out.println("Print the values depend on y value ");
         Scanner sc = new Scanner(System.in);
-        int mark = sc.nextInt();
-        if (mark >= 90) {
-            System.out.println("Grade A");
-        } else if (mark >= 80) {
-            System.out.println("Grade B");
-        }else if (mark >= 60) {
-            System.out.println("Grade C");
-        } else if (mark >= 35) {
-            System.out.println("Grade D");
-        }else {
-            System.out.println("Fail");
+        int[] numbers = new int[2];
+        int x = 0 , y = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (i== 0)
+            {
+                System.out.println("Enter the value of x ");
+                x = sc.nextInt();
+            }
+
+            else
+            {
+                System.out.println("Enter the value of y  ");
+                y = sc.nextInt();
+            }
+
+
         }
+
+        for (int j = 0; j <= y; j++) {
+            System.out.println(x);
+        }
+
 
 
     }
