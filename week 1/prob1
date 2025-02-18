@@ -1,0 +1,61 @@
+-------Prob 1 : Write a program that takes an integer, then a string, then a char from the user and prints them in the screen.
+
+----Input:  2 Name y
+----------Expected Output:
+--2
+-----Name
+---y 
+
+---------------------------------program------------------------------- 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+        // to see how IntelliJ IDEA suggests fixing it.
+        System.out.printf("Hello and welcome!");
+        System.out.println("Learning DSA");
+        prob1();
+
+    }
+
+    public static  void prob1() {
+        System.out.println("Enter phrase contain letter, number and char");
+        Scanner scanner = new Scanner(System.in);
+       /* String userInputString = scanner.nextLine();
+        System.out.println(userInputString);*/
+
+ while (scanner.hasNext()) {
+     String userInputString = scanner.next();
+     if (isNumeric(userInputString)){
+
+         System.out.println("Integer: "+userInputString);
+
+     } else if (isAlphabetic(userInputString)) {
+         System.out.println("String: "+userInputString);
+
+     }else  {
+         System.out.println("Char: "+userInputString);
+
+     }
+ }
+
+
+    }
+
+    private static boolean isAlphabetic(String userInputString) {
+if (userInputString.length() == 1) {
+    return false;
+}else
+        return true;
+    }
+
+    private static boolean isNumeric(String userInputString) {
+        try {
+            Integer.parseInt(userInputString);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+}
